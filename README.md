@@ -1,9 +1,10 @@
 # Docker environment for Harp
 
+**WiP** - do not expect this to run smoothly for now!
+
 For installing harp in a docker environment.
 
 Note that you may need to use sudo when running docker commands.
-
 
 
 ## Building
