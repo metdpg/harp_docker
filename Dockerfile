@@ -4,7 +4,9 @@ RUN apt-get update && apt-get install -y \
     libudunits2-dev \
     libgdal-dev \
     libgeos-dev \
-    libproj-dev
+    libproj-dev \
+    libnetcdf-dev \
+    libeccodes-dev
 
 
 RUN R -e "install.packages('remotes')"
@@ -14,7 +16,9 @@ RUN R -e "remotes::install_github('harphub/harpIO')"
 RUN R -e "remotes::install_github('harphub/harpPoint')"
 RUN R -e "remotes::install_github('harphub/harpVis')"
 RUN R -e "remotes::install_github('harphub/harp')"
+RUN R -e "remotes::install_github('harphub/Rgrib2')"
 
 RUN R -e "install.packages('tidyverse')"
 RUN R -e "install.packages('ggtext')"
 RUN R -e "install.packages('sf')"
+RUN R -e "install.packages('ncdf4')"
